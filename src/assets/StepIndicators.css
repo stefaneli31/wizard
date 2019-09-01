@@ -1,0 +1,35 @@
+.step-indicator {
+  width: 25%;
+  position: relative;
+}
+.step-indicator:not(:last-child) .circle:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  left: 75%;
+  height: 2px;
+  background: #ddd;
+}
+.step-indicator .label {
+  position: absolute;
+  bottom: -30px;
+}
+.step-indicator.done .circle,
+.step-indicator.done .circle:after {
+  background: #4c4;
+}
+.step-indicator.done {
+  opacity: 0.3;
+}
+.step-indicator.current .circle {
+  background-color: #bfb;
+  border-color: #4c4;
+  color: #000;
+}
+.step-indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+}

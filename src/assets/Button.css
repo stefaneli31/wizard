@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  min-width: 100px;
+  text-align: center;
+}
+.button.right {
+  margin-right: 0;
+}
+.button.disabled {
+  cursor: not-allowed;
+  background: transparent;
+  opacity: 0.3;
+}

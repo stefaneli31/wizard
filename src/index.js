@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import configureStore from './store/configureStore';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Wizard from './containers/Wizard';
+import 'normalize.css';
+import './styles.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const store = configureStore();
+
+const App = () => (
+  <Provider store={store}>
+    <Wizard/>
+  </Provider>
+);
+
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

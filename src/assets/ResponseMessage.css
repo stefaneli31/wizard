@@ -1,0 +1,25 @@
+.response {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.response .circle {
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.response .label {
+  margin-bottom: 50px;
+}
+
+.response.success .circle {
+  background: green;
+}
+
+.response.failed .circle {
+  background: red;
+}
