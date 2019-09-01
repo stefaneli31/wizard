@@ -199,7 +199,7 @@ export const submitForm = data => {
     }
     if (subGenreData) {
       dispatch(submitSubgenre()); // start
-      return fakeFetch(subGenreData, false) // fake post
+      return fakeFetch(subGenreData) // fake post
         .then(response => {
             response = subGenreData;
             response.id = Date.now(); // generate fake ID
